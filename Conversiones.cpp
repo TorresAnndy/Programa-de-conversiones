@@ -97,7 +97,8 @@ int main() {
     cin.get(); // Hacemos la pausa correspondiente
     cout << endl;
 
- while (true){
+ while (true)
+ {
         cout << "Ingrese el numero a convertir: ";
         cin >> numero;
         
@@ -112,17 +113,18 @@ int main() {
         cin >> opc;
         cout << endl;
 
-        if (opc == 11) {
+        if (opc == 11)
+        {
             cout << "Saliendo del programa..." << endl;
             break; // Salir del bucle
         }
-
-        float resultado = Conversion(opc, numero);
-
-        if (resultado < 1 || resultado > 11){
+        else if (opc < 1 || opc > 11)
+        {
             cout << "Opcion No encontrada. Intentalo de nuevo\n";
         }
-        else{
+        else
+        {
+            float resultado = Conversion(opc, numero);
             cout << "El resultado de la conversión es: " << resultado << endl;
         }
 
