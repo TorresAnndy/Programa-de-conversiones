@@ -23,7 +23,7 @@
 */
 
 #include <iostream>
-#include <conio.h> // Esta biblioteca permite pausar el programa y que el usuario presione una tecla para continuar
+//#include <conio.h> // Esta biblioteca permite pausar el programa y que el usuario presione una tecla para continuar
 
 using namespace std;
 
@@ -94,7 +94,7 @@ int main() {
 
     cout << "─── ⋆⋅☆⋅⋆ ── Bienvenido a mi Programa de Conversion ─── ⋆⋅☆⋅⋆ ──\n"
          << "Presione ENTER para continuar ";
-    getch(); // Hacemos la pausa correspondiente
+    cin.get(); // Hacemos la pausa correspondiente
     cout << endl;
 
  while (true){
@@ -127,7 +127,7 @@ int main() {
         }
 
         cout << "Presione ENTER para continuar ";
-        getch(); // Hacemos la pausa correspondiente
+        cin.get(); // Hacemos la pausa correspondiente
         cout << endl;
     }
 
