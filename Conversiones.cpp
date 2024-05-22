@@ -93,7 +93,8 @@ float Conversion(int opc, float valor)// funcion que nos hace las conversiones
     }
 };
 
-int main() {
+int main(int argc, char const *argv[])
+{
     float numero;
     int opc;
 
@@ -112,6 +113,7 @@ int main() {
             cout << "Saliendo del programa..." << endl;
             break; // Salir del bucle
         }
+
         cout << "Ingrese el numero a convertir: ";
         cin >> numero;
         
