@@ -58,6 +58,11 @@ void mostrarMenu()//Funcion para preguntarle al usuario que desea convertir
 ▄▄▄▌▐██▌█ CONVERSIONES DEPENDE LA OPCION QUE ELIJAMOS █
 ███████▌█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█
 ▀(O)▀▀▀▀▀▀▀(O)(O)▀▀▀▀▀▀▀▀▀▀▀▀▀(O)(O)▀▀▀▀▀▀▀▀▀▀▀(O)(O)▀▀
+
+Tabla
+PB TB GB MG KB BYTES BIT
+de derecha a izquierda se divide 
+de izquierda a derecha se multiplica
 */
 
 float Conversion(int opc, float valor)// funcion que nos hace las conversiones
@@ -97,7 +102,16 @@ int main() {
     getch(); // Hacemos la pausa correspondiente
     cout << endl;
 
- while (true){
+ while (true)
+ {
+        cout << endl;
+        mostrarMenu();
+        cin >> opc;
+        if (opc == 11)
+        {
+            cout << "Saliendo del programa..." << endl;
+            break; // Salir del bucle
+        }
         cout << "Ingrese el numero a convertir: ";
         cin >> numero;
         
@@ -105,17 +119,6 @@ int main() {
         {
             cout << "\nDebes Ingresar un numero. Inténtalo de nuevo.\n";
             continue;//usamos continue para que el bucle continue y no se detenga
-        }
-
-        cout << endl;
-        mostrarMenu();
-        cin >> opc;
-        cout << endl;
-
-        if (opc == 11)
-        {
-            cout << "Saliendo del programa..." << endl;
-            break; // Salir del bucle
         }
         else if (opc< 1 || opc > 11)
         {
