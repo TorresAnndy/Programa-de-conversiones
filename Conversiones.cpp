@@ -58,6 +58,11 @@ void mostrarMenu()//Funcion para preguntarle al usuario que desea convertir
 ▄▄▄▌▐██▌█ CONVERSIONES DEPENDE LA OPCION QUE ELIJAMOS █
 ███████▌█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█
 ▀(O)▀▀▀▀▀▀▀(O)(O)▀▀▀▀▀▀▀▀▀▀▀▀▀(O)(O)▀▀▀▀▀▀▀▀▀▀▀(O)(O)▀▀
+
+Tabla
+PB TB GB MG KB BYTES BIT
+de derecha a izquierda se divide 
+de izquierda a derecha se multiplica
 */
 
 float Conversion(int opc, float valor)// funcion que nos hace las conversiones
@@ -88,7 +93,8 @@ float Conversion(int opc, float valor)// funcion que nos hace las conversiones
     }
 };
 
-int main() {
+int main(int argc, char const *argv[])
+{
     float numero;
     int opc;
 
@@ -99,6 +105,15 @@ int main() {
 
  while (true)
  {
+        cout << endl;
+        mostrarMenu();
+        cin >> opc;
+        if (opc == 11)
+        {
+            cout << "Saliendo del programa..." << endl;
+            break; // Salir del bucle
+        }
+
         cout << "Ingrese el numero a convertir: ";
         cin >> numero;
         
@@ -107,23 +122,11 @@ int main() {
             cout << "\nDebes Ingresar un numero. Inténtalo de nuevo.\n";
             continue;//usamos continue para que el bucle continue y no se detenga
         }
-
-        cout << endl;
-        mostrarMenu();
-        cin >> opc;
-        cout << endl;
-
-        if (opc == 11)
-        {
-            cout << "Saliendo del programa..." << endl;
-            break; // Salir del bucle
-        }
-        else if (opc < 1 || opc > 11)
+        else if (opc< 1 || opc > 11)
         {
             cout << "Opcion No encontrada. Intentalo de nuevo\n";
         }
-        else
-        {
+        else{
             float resultado = Conversion(opc, numero);
             cout << "El resultado de la conversión es: " << resultado << endl;
         }
